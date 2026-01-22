@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=3 uid="uid://doc33v6elcuga"]
+
+[ext_resource type="Script" uid="uid://bqopivpdeubkp" path="res://scripts/loading.gd" id="1_dhqfv"]
+[ext_resource type="Texture2D" uid="uid://dmxgxy8rro6br" path="res://assets/Menu_Chargement/logoChargement.png" id="1_yc7uc"]
+
+[sub_resource type="Gradient" id="Gradient_101rs"]
+offsets = PackedFloat32Array(0, 0.994048)
+colors = PackedColorArray(0.207843, 0.207843, 0.207843, 1, 0.20871, 0.20871, 0.20871, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_yt702"]
+gradient = SubResource("Gradient_101rs")
+
+[node name="Loading" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dhqfv")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_yt702")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -134.0
+offset_top = 221.0
+offset_right = 134.0
+offset_bottom = 290.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 50
+text = "LOADING..."
+
+[node name="LogoChargement" type="Sprite2D" parent="."]
+position = Vector2(560, 367)
+scale = Vector2(0.174805, 0.175781)
+texture = ExtResource("1_yc7uc")
+
+[connection signal="ready" from="." to="." method="_on_ready"]

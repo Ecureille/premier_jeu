@@ -1,0 +1,100 @@
+[gd_scene load_steps=7 format=3 uid="uid://cqj50ngrakpph"]
+
+[ext_resource type="Script" uid="uid://28olpc1btq6m" path="res://scripts/menu_principal.gd" id="1_i85hu"]
+[ext_resource type="Texture2D" uid="uid://dc63g0hi5ifli" path="res://assets/Menu_Chargement/BackMenuPrincipale.png" id="2_mk4g1"]
+[ext_resource type="Texture2D" uid="uid://dpao7qmlpo0ge" path="res://assets/Menu_Chargement/CroisRougeMenu.png" id="3_iep14"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_lf1kt"]
+font_size = 80
+font_color = Color(0.886275, 0.886275, 0.258824, 1)
+outline_size = 12
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_mk4g1"]
+font_size = 80
+font_color = Color(0.940501, 0.429593, 0.788081, 1)
+outline_size = 12
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_mk4g1"]
+
+[node name="MenuPrincipal" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -9.0
+offset_right = -9.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_i85hu")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+offset_right = 1152.0
+offset_bottom = 655.0
+texture = ExtResource("2_mk4g1")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Titre" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -267.0
+offset_top = 21.0
+offset_right = 268.0
+offset_bottom = 109.0
+grow_horizontal = 2
+text = "FARMLIFE"
+label_settings = SubResource("LabelSettings_lf1kt")
+horizontal_alignment = 1
+
+[node name="CroixRouge" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 268.0
+offset_top = -8.0
+offset_right = 723.0
+offset_bottom = 165.0
+texture = ExtResource("3_iep14")
+expand_mode = 1
+
+[node name="Titre2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 376.0
+offset_top = 100.0
+offset_right = 616.0
+offset_bottom = 210.0
+text = "PORC"
+label_settings = SubResource("LabelSettings_mk4g1")
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+clip_contents = true
+layout_mode = 0
+offset_left = 65.0
+offset_top = 383.0
+offset_right = 324.0
+offset_bottom = 523.0
+theme_override_constants/separation = 40
+
+[node name="StartBTN" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.752941, 0.439216, 0.521569, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "START"
+icon = SubResource("ViewportTexture_mk4g1")
+flat = true
+
+[node name="QuitBTN" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.752941, 0.439216, 0.521569, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Quitter"
+flat = true
+
+[connection signal="button_down" from="VBoxContainer/StartBTN" to="." method="_on_start_btn_button_down"]
+[connection signal="button_down" from="VBoxContainer/QuitBTN" to="." method="_on_quit_btn_button_down"]

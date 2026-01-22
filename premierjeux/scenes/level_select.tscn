@@ -1,0 +1,151 @@
+[gd_scene load_steps=5 format=3 uid="uid://cqc1ng4bv3hjd"]
+
+[ext_resource type="Texture2D" uid="uid://b4pcjoucx6pg3" path="res://assets/Player.png" id="1_3shnc"]
+[ext_resource type="Script" uid="uid://dwbx75rqp2vo" path="res://scripts/level_select.gd" id="1_p0wlc"]
+
+[sub_resource type="Gradient" id="Gradient_64kqf"]
+colors = PackedColorArray(0.176419, 0.176419, 0.176419, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_3shnc"]
+gradient = SubResource("Gradient_64kqf")
+fill_from = Vector2(1, 0)
+
+[node name="LevelSelect" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 22.0
+offset_top = -39.0
+offset_right = 22.0
+offset_bottom = -39.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_p0wlc")
+
+[node name="level1" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 128.0
+offset_top = 214.0
+offset_right = 240.0
+offset_bottom = 335.0
+
+[node name="Label" type="Label" parent="level1"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = -5.0
+offset_right = 82.0
+offset_bottom = 18.0
+text = "level 1"
+
+[node name="TextureRect" type="TextureRect" parent="level1"]
+layout_mode = 0
+offset_left = -20.0
+offset_top = 22.0
+offset_right = 132.0
+offset_bottom = 128.0
+texture = SubResource("GradientTexture2D_3shnc")
+
+[node name="level2" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 313.0
+offset_top = 212.0
+offset_right = 425.0
+offset_bottom = 342.0
+
+[node name="Label" type="Label" parent="level2"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = -5.0
+offset_right = 82.0
+offset_bottom = 18.0
+text = "level 2"
+
+[node name="TextureRect" type="TextureRect" parent="level2"]
+layout_mode = 0
+offset_left = -20.0
+offset_top = 22.0
+offset_right = 132.0
+offset_bottom = 128.0
+texture = SubResource("GradientTexture2D_3shnc")
+
+[node name="level3" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 497.0
+offset_top = 212.0
+offset_right = 609.0
+offset_bottom = 333.0
+
+[node name="Label" type="Label" parent="level3"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = -5.0
+offset_right = 82.0
+offset_bottom = 18.0
+text = "level 3"
+
+[node name="TextureRect" type="TextureRect" parent="level3"]
+layout_mode = 0
+offset_left = -20.0
+offset_top = 22.0
+offset_right = 132.0
+offset_bottom = 128.0
+texture = SubResource("GradientTexture2D_3shnc")
+
+[node name="level4" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 696.0
+offset_top = 212.0
+offset_right = 808.0
+offset_bottom = 333.0
+
+[node name="Label" type="Label" parent="level4"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = -5.0
+offset_right = 82.0
+offset_bottom = 18.0
+text = "level 4"
+
+[node name="TextureRect" type="TextureRect" parent="level4"]
+layout_mode = 0
+offset_left = -20.0
+offset_top = 22.0
+offset_right = 132.0
+offset_bottom = 128.0
+texture = SubResource("GradientTexture2D_3shnc")
+
+[node name="level5" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 885.0
+offset_top = 211.0
+offset_right = 997.0
+offset_bottom = 332.0
+
+[node name="Label" type="Label" parent="level5"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = -5.0
+offset_right = 82.0
+offset_bottom = 18.0
+text = "level 5"
+
+[node name="TextureRect" type="TextureRect" parent="level5"]
+layout_mode = 0
+offset_left = -20.0
+offset_top = 22.0
+offset_right = 132.0
+offset_bottom = 128.0
+texture = SubResource("GradientTexture2D_3shnc")
+
+[node name="imgPlayer" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 108.0
+offset_top = 236.0
+offset_right = 258.0
+offset_bottom = 342.0
+texture = ExtResource("1_3shnc")
