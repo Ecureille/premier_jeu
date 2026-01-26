@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cqj50ngrakpph"]
+[gd_scene load_steps=6 format=3 uid="uid://cqj50ngrakpph"]
 
 [ext_resource type="Script" uid="uid://28olpc1btq6m" path="res://scripts/menu_principal.gd" id="1_i85hu"]
 [ext_resource type="Texture2D" uid="uid://dc63g0hi5ifli" path="res://assets/Menu_Chargement/BackMenuPrincipale.png" id="2_mk4g1"]
@@ -15,8 +15,6 @@ font_size = 80
 font_color = Color(0.940501, 0.429593, 0.788081, 1)
 outline_size = 12
 outline_color = Color(0, 0, 0, 1)
-
-[sub_resource type="ViewportTexture" id="ViewportTexture_mk4g1"]
 
 [node name="MenuPrincipal" type="Control"]
 layout_mode = 3
@@ -81,17 +79,16 @@ theme_override_constants/separation = 40
 
 [node name="StartBTN" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_hover_color = Color(0.752941, 0.439216, 0.521569, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.752941, 0.439216, 0.521569, 1)
 theme_override_font_sizes/font_size = 30
 text = "START"
-icon = SubResource("ViewportTexture_mk4g1")
 flat = true
 
 [node name="QuitBTN" type="Button" parent="VBoxContainer"]
 layout_mode = 2
-theme_override_colors/font_hover_color = Color(0.752941, 0.439216, 0.521569, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.752941, 0.439216, 0.521569, 1)
 theme_override_font_sizes/font_size = 30
 text = "Quitter"
 flat = true

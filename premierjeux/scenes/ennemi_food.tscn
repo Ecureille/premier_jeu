@@ -4,7 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://sp14eue41qdp" path="res://scenes/killzone.tscn" id="2_tgwov"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_tgwov"]
-resource_local_to_scene = true
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tgwov"]
 size = Vector2(111.111, 117.778)
@@ -49,5 +48,9 @@ target_position = Vector2(56, -0.5)
 [node name="RayCastLeft" type="RayCast2D" parent="."]
 position = Vector2(-20, -14.5)
 target_position = Vector2(-56, -0.5)
+
+[node name="RayCastVision" type="RayCast2D" parent="."]
+position = Vector2(-20, -15)
+hit_from_inside = true
 
 [connection signal="body_entered" from="Tete" to="." method="_on_tete_body_entered"]
